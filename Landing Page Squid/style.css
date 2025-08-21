@@ -1,0 +1,55 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Stardew_Valley';
+    src: url('font/Stardew_Valley.ttf') format('truetype'); 
+}
+
+body {
+    background-image: url(images/background-image.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Stardew_Valley', sans-serif;
+    background-position: top;
+}
+
+main {
+    min-height: 100vh;
+}
+
+header {
+    margin: 0px;
+    background-color: rgb(0,23,100, 0.5);
+}
+
+.headers-pages {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 5px 500px 5px 500px;
+    color: white;
+    font-size: 28px;
+    text-decoration: none;
+}
+
+.headers-pages h1:hover {
+    color: #ffe300;
+}
+
+.main-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 150px;
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
