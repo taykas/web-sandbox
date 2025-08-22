@@ -1,0 +1,38 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(231, 211, 211);
+}
+
+.container-enter_section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.enter-title {
+    text-align: center;
+    margin: 10%;
+    color:rgb(185, 55, 93);
+}
+
+.text-container {
+    width: 45%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.text {
+    flex-direction: column;
+    background-color: bisque;
+    padding: 5%;
+    border-radius: 5%;
+    margin-left: 40%;
+}
