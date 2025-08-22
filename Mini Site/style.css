@@ -31,7 +31,8 @@ body {
 
 .text {
     flex-direction: column;
-    background-color: bisque;
+    color: rgb(231, 211, 211);
+    background-color:rgb(185, 55, 93);
     padding: 5%;
     border-radius: 5%;
     margin-left: 40%;
