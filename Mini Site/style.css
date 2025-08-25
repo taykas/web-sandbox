@@ -21,19 +21,27 @@ body {
     color:rgb(185, 55, 93);
 }
 
-.text-container {
-    width: 45%;
-    height: 100vh;
+.container-page {
     display: flex;
     align-items: center;
     justify-content: center;
+    height: 100vh;
 }
 
-.text {
+.cute {
+    display: flex;
+    height: auto;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5%;
+    width: 60%;
+    margin: auto;
+}
+
+.text-left, .text-right{
     flex-direction: column;
     color: rgb(231, 211, 211);
     background-color:rgb(185, 55, 93);
     padding: 5%;
     border-radius: 5%;
-    margin-left: 40%;
 }
