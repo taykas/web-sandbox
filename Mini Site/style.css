@@ -38,7 +38,47 @@ body {
     margin: auto;
 }
 
-.text-left, .text-right{
+.text-container-left,
+.text-container-right {
+    display: flex;
+    flex-direction: column;   
+    align-items: center;    
+    text-align: center;       
+    gap: 20px;               
+}
+
+.read-button {
+    padding: 5% 10%;
+    background-color: white;
+    color: rgb(185, 55, 93);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 100%;
+}
+
+.read-button:hover {
+    background-color: rgb(185, 55, 93);
+    color: white;
+}
+
+.read-button:active{
+    background-color: rgb(185, 55, 93);
+    color: white;
+}
+
+
+.hidden {
+    flex-direction: column;
+    color: rgb(231, 211, 211);
+    background-color:rgb(210, 93, 93);
+    color: rgb(210, 93, 93);
+    padding: 5%;
+    border-radius: 5%;
+}
+
+.text-left,
+.text-right {
     flex-direction: column;
     color: rgb(231, 211, 211);
     background-color:rgb(185, 55, 93);
