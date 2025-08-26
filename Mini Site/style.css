@@ -21,12 +21,6 @@ body {
     color:rgb(185, 55, 93);
 }
 
-.tet {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
 .container-page {
     display: flex;
     align-items: center;
@@ -96,4 +90,31 @@ body {
 .arrow {
     width: 10%;
     margin-right: 5%;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0.5%;
+}
+
+.title-image-page {
+    text-align: center;
+    padding: 1%;
+    color: white;
+    background-color: rgb(210, 93, 93);
+    width: 30%;
+    border-radius: 15px;
+}
+
+.image-box {
+    width: 615px;
+    height: 540px;
+    position: relative;
+    margin: auto;
+    overflow: scroll;
+    border-radius: 15px;
+    display: flex;
+    scrollbar-color: rgb(185, 55, 93) rgb(231, 211, 211);
 }
