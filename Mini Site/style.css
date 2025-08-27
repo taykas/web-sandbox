@@ -68,7 +68,6 @@ body {
     color: white;
 }
 
-
 .hidden {
     flex-direction: column;
     color: rgb(231, 211, 211);
@@ -107,22 +106,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-}
-
-.header {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0.5%;
-}
-
-.title-image-page {
-    text-align: center;
-    padding: 1%;
-    color: white;
-    background-color: rgb(210, 93, 93);
-    width: 30%;
-    border-radius: 15px;
+    margin-top: 7%;
 }
 
 .images-container {
@@ -136,9 +120,26 @@ body {
     height: 540px;
     position: relative;
     margin: auto;
-    overflow: scroll;
+    overflow-y: scroll;
+    overflow-x: hidden;
     border-radius: 15px;
     display: flex;
     scrollbar-color: rgb(185, 55, 93) rgb(231, 211, 211);
-    background-color: rgb(185, 55, 93) ;
+    background-color: rgb(185, 55, 93);
+    margin-top: 10%;
+    scroll-snap-stop: normal;
+}
+
+@keyframes tremer {
+    0% {transform: rotate(30deg);}
+    50% {transform: rotate(-30deg) scale(1.0);}
+    100% {transform: rotate(30deg);}
+}
+
+.icon {
+    animation: tremer 2s linear infinite;
+}
+
+.icon:nth-child(2n) {
+    animation: tremer 10s linear infinite;
 }
