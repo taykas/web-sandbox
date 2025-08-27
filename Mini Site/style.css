@@ -92,6 +92,23 @@ body {
     margin-right: 5%;
 }
 
+.body-page {
+    background-color: rgb(231, 223, 223);
+}
+
+.test {
+    display: flex;
+    align-items: center;
+    justify-items: center;
+}
+
+.little-images {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
 .header {
     display: flex;
     align-items: center;
@@ -108,8 +125,14 @@ body {
     border-radius: 15px;
 }
 
+.images-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .image-box {
-    width: 615px;
+    width: 600px;
     height: 540px;
     position: relative;
     margin: auto;
@@ -117,4 +140,5 @@ body {
     border-radius: 15px;
     display: flex;
     scrollbar-color: rgb(185, 55, 93) rgb(231, 211, 211);
+    background-color: rgb(185, 55, 93) ;
 }
