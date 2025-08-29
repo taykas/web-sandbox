@@ -2,6 +2,10 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
+    font-family: "Schoolbell", cursive;
+    font-weight: 400;
+    font-style: normal;
+
 }
 
 body {
@@ -91,8 +95,16 @@ body {
     margin-right: 5%;
 }
 
-.body-page {
-    background-color: rgb(231, 223, 223);
+.image-page-container {
+    margin-top: 5%;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: rgb(185, 55, 93);
 }
 
 .test {
@@ -106,7 +118,11 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 7%;
+    /* margin-top: 7%; */
+}
+
+#dupla {
+    margin-bottom: 5%;
 }
 
 .images-container {
@@ -126,7 +142,7 @@ body {
     display: flex;
     scrollbar-color: rgb(185, 55, 93) rgb(231, 211, 211);
     background-color: rgb(185, 55, 93);
-    margin-top: 10%;
+    /* margin-top: 10%; */
     scroll-snap-stop: normal;
 }
 
@@ -142,4 +158,16 @@ body {
 
 .icon:nth-child(2n) {
     animation: tremer 10s linear infinite;
+}
+
+.counter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: rgb(185, 55, 93);
+}
+
+#contador {
+    font-size: 35px;
 }
