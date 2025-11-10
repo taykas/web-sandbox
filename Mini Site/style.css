@@ -48,7 +48,12 @@ body {
     flex-direction: column;   
     align-items: center;    
     text-align: center;   
-    gap: 20px;               
+    gap: 20px;
+    overflow: hidden;
+    align-items: center;
+    justify-items: center;      
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 .read-button {
@@ -71,31 +76,51 @@ body {
     color: white;
 }
 
+
 .hidden {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     flex-direction: column;
     color: rgb(231, 211, 211);
     background-color:rgb(210, 93, 93);
     color: rgb(210, 93, 93);
     padding: 5%;
-    border-radius: 5%;
+    border-radius: 20px;
+    width: 350px;
+    height: 350px;
+    overflow-y: auto;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 .text-left,
 .text-right {
+    font-size: 16px;    
+    display: flex;
+    align-items: center;
+    justify-content: center;
     flex-direction: column;
     color: rgb(231, 211, 211);
-    background-color:rgb(185, 55, 93);
+    background-color: rgb(185, 55, 93);
     padding: 5%;
-    border-radius: 5%;
+    border-radius: 20px;
+    width: 350px;
+    height: 350px;
+    text-align: center;
+    font-size: 8px;
+}
+
+.hidden::-webkit-scrollbar,
+.text-left::-webkit-scrollbar,
+.text-right::-webkit-scrollbar {
+    display: none;
 }
 
 .arrow {
     width: 10%;
     margin-right: 5%;
-}
-
-.image-page-container {
-    margin-top: 5%;
 }
 
 .header {
