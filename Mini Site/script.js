@@ -29,56 +29,60 @@ let changeColorR = () => {
 
 function iniciarContadorDeData() {
     const contadorElemento = document.getElementById('contador');
-    const dataInicial = new Date("2024-11-30T00:00:00"); // Definindo a data de início
+    if (!contadorElemento) {
+        console.error('Elemento com id="contador" não encontrado.');
+        return;
+    }
 
-
+    // Data de início
+    const dataInicial = new Date("2024-11-30T00:00:00");
 
     function atualizarContador() {
         const agora = new Date();
-        
-        const diferencaMs = agora - dataInicial;
 
-        let anos = agora.getFullYear() - dataInicial.getFullYear();
-
-        if (agora.getMonth() < dataInicial.getMonth() || 
-           (agora.getMonth() === dataInicial.getMonth() && agora.getDate() < dataInicial.getDate())) {
-            anos--;
+        // Se a data inicial ainda não chegou
+        if (agora < dataInicial) {
+            contadorElemento.textContent = "Aguardando data inicial...";
+            return;
         }
 
+        // Diferença em milissegundos
+        const diferencaMs = agora - dataInicial;
+
+        // Calcular anos, meses e dias
+        let anos = agora.getFullYear() - dataInicial.getFullYear();
         let meses = agora.getMonth() - dataInicial.getMonth();
+        let dias = agora.getDate() - dataInicial.getDate();
+
+        // Ajustar dias e meses quando negativo
+        if (dias < 0) {
+            meses--;
+            const mesAnterior = new Date(agora.getFullYear(), agora.getMonth(), 0);
+            dias += mesAnterior.getDate();
+        }
+
         if (meses < 0) {
+            anos--;
             meses += 12;
         }
 
-        let dias = agora.getDate() - dataInicial.getDate();
-
-        // Ajusta anos e meses se necessário
-        if (dias < 0) {
-            // Vai para o mês anterior
-            meses--;
-            const mesAnterior = new Date(agora.getFullYear(), agora.getMonth(), 0);
-            dias += mesAnterior.getDate(); // Corrige os dias com base no mês anterior
-        }
-        
-
-        // Horas
+        // Calcular horas, minutos e segundos
         const horas = Math.floor((diferencaMs % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-
-        // Minutos
         const minutos = Math.floor((diferencaMs % (1000 * 60 * 60)) / (1000 * 60));
-
-        // Segundos
         const segundos = Math.floor((diferencaMs % (1000 * 60)) / 1000);
 
-        // Atualiza o conteúdo da página
-        contadorElemento.textContent = 
-            `${anos}a ${meses}m ${dias}d ${horas}h ${minutos}m ${segundos}s`;
+        // Função para sempre mostrar 2 dígitos
+        const pad = n => String(n).padStart(2, '0');
+
+        // Atualiza o texto
+        contadorElemento.textContent =
+            `${anos}a ${meses}m ${dias}d ${pad(horas)}h ${pad(minutos)}m ${pad(segundos)}s`;
     }
 
     // Atualiza a cada segundo
+    atualizarContador();
     setInterval(atualizarContador, 1000);
-    atualizarContador(); // Atualiza imediatamente
 }
 
-// Inicia o contador automaticamente assim que a página carregar
-window.onload = iniciarContadorDeData;
+// Garante que só inicie depois que a página carregar
+document.addEventListener("DOMContentLoaded", iniciarContadorDeData);
