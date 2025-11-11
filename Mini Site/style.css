@@ -36,7 +36,6 @@ body {
     height: auto;
     align-items: center;
     justify-content: space-between;
-    gap: 5%;
     width: 60%;
     margin: auto;
     margin-left: 18%;
@@ -49,9 +48,7 @@ body {
     align-items: center;    
     text-align: center;   
     gap: 20px;
-    overflow: hidden;
-    align-items: center;
-    justify-items: center;      
+    overflow: hidden;     
     word-wrap: break-word;
     overflow-wrap: break-word;
 }
@@ -88,8 +85,8 @@ body {
     color: rgb(210, 93, 93);
     padding: 5%;
     border-radius: 20px;
-    width: 350px;
-    height: 350px;
+    width: 450px;
+    height: 450px;
     overflow-y: auto;
     word-wrap: break-word;
     overflow-wrap: break-word;
@@ -106,8 +103,8 @@ body {
     background-color: rgb(185, 55, 93);
     padding: 5%;
     border-radius: 20px;
-    width: 350px;
-    height: 350px;
+    width: 450px;
+    height: 450px;
     text-align: center;
     font-size: 8px;
 }
@@ -131,6 +128,14 @@ body {
     color: rgb(185, 55, 93);
 }
 
+.image-page-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
 .test {
     display: flex;
     align-items: center;
@@ -142,7 +147,6 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    /* margin-top: 7%; */
 }
 
 #dupla {
